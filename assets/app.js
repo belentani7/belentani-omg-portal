@@ -107,7 +107,7 @@
             <span class="tier tier-${esc(project.tier)}">${esc(project.tier)}</span>
           </div>
           <h3 class="project-name">${esc(project.name)}</h3>
-          <p class="project-cat">${esc(labels[project.cat] || project.cat)}${project.private ? ' <span class="private-mark">/ PRIVADO</span>' : ""}${project.archived ? ' <span class="private-mark">/ ARCHIVADO</span>' : ""}</p>
+          <p class="project-cat">${esc(labels[project.cat] || project.cat)}${project.private ? ' <span class="private-mark">/ PRIVADO</span>' : ""}${project.archived ? ' <span class="private-mark">/ ARCHIVADO</span>' : ""}${project.status ? ` <span class="status-mark">/ ${esc(project.status)}</span>` : ""}</p>
           <p class="project-desc">${esc(project.desc)}</p>
           <div class="project-foot">
             ${stackMarkup(project.stack)}

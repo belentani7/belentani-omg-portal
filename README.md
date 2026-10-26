@@ -131,6 +131,10 @@ Los repos con homepage activa se conservaron. Los archivados quedan en solo lect
 '{"archived":false}' | gh api --method PATCH /repos/belentani7/REPO --input -
 ```
 
+## Coherencia
+
+El chequeo de enlaces, demos y diseño educativo está en [COHERENCE.md](./COHERENCE.md). Incluye el caso de `ManosAbiertas`, que apuntaba a otro producto, y las demos retiradas hasta que vuelvan a estar verdes.
+
 ## Seguridad
 
 - No hay claves, tokens ni contraseñas en el portal.

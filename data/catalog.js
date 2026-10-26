@@ -117,7 +117,7 @@ window.OMG_CATALOG = {
       desc: "Rotación y gestión de claves API con foco en higiene operativa.",
       stack: ["Python", "Security"],
       repo: "https://github.com/belentani7/keyrotor",
-      live: "https://keyrotor.vercel.app"
+      status: "demo en revisión"
     },
     {
       name: "safe-exec",
@@ -202,7 +202,7 @@ window.OMG_CATALOG = {
       desc: "Educación gratuita para migrantes: cursos, CV, derechos y recursos.",
       stack: ["TypeScript", "Education"],
       repo: "https://github.com/belentani7/ManosAbiertas",
-      live: "https://manosabiertas.vercel.app"
+      status: "demo pendiente"
     },
     {
       name: "WILLIAMSCHOOL",
@@ -211,7 +211,7 @@ window.OMG_CATALOG = {
       desc: "Plataforma ESO/Bachillerato con puentes PT→ES→CA y compañero de IA.",
       stack: ["TypeScript", "Education"],
       repo: "https://github.com/belentani7/WILLIAMSCHOOL",
-      live: "https://williamschool-livid.vercel.app"
+      live: "https://williamschool.vercel.app"
     },
     {
       name: "lingua-aberta",
@@ -229,7 +229,7 @@ window.OMG_CATALOG = {
       desc: "Forja lingüística: traducción y adaptación multilingüe con herramientas propias.",
       stack: ["TypeScript", "Language"],
       repo: "https://github.com/belentani7/linguaforge",
-      live: "https://linguaforge.vercel.app"
+      status: "demo en revisión"
     },
     {
       name: "Belentani.cv-ai",

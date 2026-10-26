@@ -158,7 +158,7 @@
         "Security"
       ],
       "repo": "https://github.com/belentani7/keyrotor",
-      "live": "https://keyrotor.vercel.app"
+      "status": "demo en revisión"
     },
     {
       "name": "safe-exec",
@@ -278,7 +278,7 @@
         "Education"
       ],
       "repo": "https://github.com/belentani7/ManosAbiertas",
-      "live": "https://manosabiertas.vercel.app"
+      "status": "demo pendiente"
     },
     {
       "name": "WILLIAMSCHOOL",
@@ -290,7 +290,7 @@
         "Education"
       ],
       "repo": "https://github.com/belentani7/WILLIAMSCHOOL",
-      "live": "https://williamschool-livid.vercel.app"
+      "live": "https://williamschool.vercel.app"
     },
     {
       "name": "lingua-aberta",
@@ -314,7 +314,7 @@
         "Language"
       ],
       "repo": "https://github.com/belentani7/linguaforge",
-      "live": "https://linguaforge.vercel.app"
+      "status": "demo en revisión"
     },
     {
       "name": "Belentani.cv-ai",
