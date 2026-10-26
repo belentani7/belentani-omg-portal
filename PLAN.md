@@ -31,7 +31,7 @@
 - [x] Clonar `hypnguyen1209/codex-free` en `vendor/codex-free` (`3085b91`), el "turn ChatGPT into Codex".
 - [x] Clonar `belentani7/swarm` en `vendor/swarm` (`69b1a11`), el prototipo.
 - [x] Fijar commits, licencias y URLs en `vendor/manifest.json`.
-- [ ] Ejecutar Graphify sobre el workspace cuando haya Python/uv disponible y guardar `graphify-out/`.
+- [ ] Ejecutar Graphify sobre el workspace cuando haya Python/uv disponible y guardar `graphify-out/`. Clon y commit ya fijados; falta runtime Python.
 
 ## Fase 2 — Portal
 
@@ -51,7 +51,7 @@
 - [x] Renombrar `agent-toolkit` → `backend_aportaciones_software02`.
 - [x] Renombrar `music-os` → `backend_aportaciones_software03`.
 - [x] Renombrar `negocio-automatizacion` → `backend_aportaciones_software04`.
-- [ ] Añadir `MOTHER.md` a cada madre con familia, portal y política.
+- [x] Añadir `MOTHER.md` a cada madre con familia, portal y política.
 - [x] Actualizar descripción, homepage y topics de cada madre.
 - [x] Marcar relaciones: 01 agentes, 02 devtools, 03 creative, 04 negocio.
 - [ ] Evaluar mover submodules o paquetes compartidos a las madres en una segunda pasada.
@@ -70,17 +70,17 @@
 - [x] Crear repo público `belentani-omg-portal`.
 - [x] Push de `index.html`, `assets/`, `data/`, `README.md`, `PLAN.md`, `vendor/manifest.json`.
 - [x] Activar Pages desde `main` `/`.
-- [ ] Verificar `https://www.belentani.es/belentani-omg-portal/`.
+- [x] Verificar `https://www.belentani.es/belentani-omg-portal/`.
 - [x] Añadir homepage del portal a las cuatro madres.
 - [x] Verificar redirecciones de los nombres antiguos.
 
 ## Fase 6 — Seguridad y cierre
 
-- [ ] Confirmar que el portal no contiene secretos.
-- [ ] Confirmar que los engines no se publicaron dentro del repo del portal.
-- [ ] Confirmar que no se rompió ninguna homepage.
-- [ ] Reportar rotaciones pendientes (PrestaShop, Google antigua, OpenRouter/Groq).
-- [ ] Reportar estado final: 420 repos, 132 activos, 288 archivados, 5 madres.
+- [x] Confirmar que el portal no contiene secretos.
+- [x] Confirmar que los engines no se publicaron dentro del repo del portal.
+- [x] Confirmar que no se rompió ninguna homepage.
+- [x] Reportar rotaciones pendientes (PrestaShop, Google antigua, OpenRouter/Groq).
+- [x] Reportar estado final: 420 repos, 132 activos, 288 archivados, 5 madres.
 
 ## API aplicada
 
