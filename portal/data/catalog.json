@@ -1,0 +1,452 @@
+{
+  "generated": "2026-10-26",
+  "totals": {
+    "repos": 420,
+    "active": 132,
+    "archived": 288,
+    "mothers": 5,
+    "curated": 27,
+    "engines": 5
+  },
+  "mothers": [
+    {
+      "id": "00",
+      "name": "belentani-omg-portal",
+      "title": "OMG Software Atlas",
+      "role": "Frontend / access layer",
+      "desc": "El portal único: busca, filtra y entra a cada sistema, demo y repo madre desde una sola superficie.",
+      "repo": "https://github.com/belentani7/belentani-omg-portal",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JS"
+      ],
+      "tone": "acid"
+    },
+    {
+      "id": "01",
+      "name": "backend_aportaciones_software01",
+      "title": "AI Systems & Orchestration",
+      "role": "Madre 01 · antes NOIACORE",
+      "desc": "Inteligencia multiagente, orquestación, gates de evidencia y routing local-first.",
+      "repo": "https://github.com/belentani7/backend_aportaciones_software01",
+      "stack": [
+        "Python",
+        "TypeScript",
+        "HTML"
+      ],
+      "tone": "violet"
+    },
+    {
+      "id": "02",
+      "name": "backend_aportaciones_software02",
+      "title": "Devtools & Skills",
+      "role": "Madre 02 · antes agent-toolkit",
+      "desc": "57 repos aplanados: skills, CLIs, runtime de agentes y ejecución segura.",
+      "repo": "https://github.com/belentani7/backend_aportaciones_software02",
+      "stack": [
+        "Python",
+        "TypeScript",
+        "Shell"
+      ],
+      "tone": "ice"
+    },
+    {
+      "id": "03",
+      "name": "backend_aportaciones_software03",
+      "title": "Creative & Music OS",
+      "role": "Madre 03 · antes music-os",
+      "desc": "Siete proyectos de música e IA: SoulX, TTS, web-audio y producción.",
+      "repo": "https://github.com/belentani7/backend_aportaciones_software03",
+      "stack": [
+        "Python",
+        "Web Audio",
+        "AI"
+      ],
+      "tone": "red"
+    },
+    {
+      "id": "04",
+      "name": "backend_aportaciones_software04",
+      "title": "Business & Automation",
+      "role": "Madre 04 · antes negocio-automatizacion",
+      "desc": "Dieciséis sistemas de automatización, operaciones, Harmonia y VibeFix.",
+      "repo": "https://github.com/belentani7/backend_aportaciones_software04",
+      "stack": [
+        "TypeScript",
+        "Python",
+        "APIs"
+      ],
+      "tone": "gold"
+    }
+  ],
+  "projects": [
+    {
+      "name": "agent-orchestration-machine",
+      "cat": "agents",
+      "tier": "OMG",
+      "desc": "Máquina de orquestación de agentes con contratos, estados y ejecución verificable.",
+      "stack": [
+        "Python",
+        "Agents"
+      ],
+      "repo": "https://github.com/belentani7/agent-orchestration-machine"
+    },
+    {
+      "name": "proofmesh",
+      "cat": "agents",
+      "tier": "OMG",
+      "desc": "Inteligencia de cambios con gates estrictos de 6 criterios, 3 nodos y 3 niveles.",
+      "stack": [
+        "TypeScript",
+        "Evidence"
+      ],
+      "repo": "https://github.com/belentani7/proofmesh"
+    },
+    {
+      "name": "swarm",
+      "cat": "agents",
+      "tier": "PRIME",
+      "desc": "Prototipo de inteligencia de enjambre multiagente, pequeño y directo.",
+      "stack": [
+        "Go",
+        "Swarm"
+      ],
+      "repo": "https://github.com/belentani7/swarm",
+      "local": "vendor/swarm"
+    },
+    {
+      "name": "agentbox",
+      "cat": "devtools",
+      "tier": "OMG",
+      "desc": "Sandboxes cloud desechables para agentes: VMs aisladas, Terraform, coste plano.",
+      "stack": [
+        "Go",
+        "Terraform"
+      ],
+      "repo": "https://github.com/belentani7/agentbox",
+      "private": true
+    },
+    {
+      "name": "agentguard",
+      "cat": "devtools",
+      "tier": "OMG",
+      "desc": "Cortafuegos de presupuesto IA: mide gasto, impone límites y pausa agentes.",
+      "stack": [
+        "Python",
+        "Go"
+      ],
+      "repo": "https://github.com/belentani7/agentguard",
+      "private": true
+    },
+    {
+      "name": "MetaSkill",
+      "cat": "devtools",
+      "tier": "OMG",
+      "desc": "Router de tareas zero-token: 16 arquetipos y 4 niveles sin quemar LLM.",
+      "stack": [
+        "Python",
+        "CLI"
+      ],
+      "repo": "https://github.com/belentani7/MetaSkill"
+    },
+    {
+      "name": "skillforge",
+      "cat": "devtools",
+      "tier": "PRIME",
+      "desc": "Package manager universal para skills de agentes: escribe una vez, instala en todo.",
+      "stack": [
+        "Python",
+        "Skills"
+      ],
+      "repo": "https://github.com/belentani7/skillforge"
+    },
+    {
+      "name": "skills-registry",
+      "cat": "devtools",
+      "tier": "PRIME",
+      "desc": "Distribución global de skills para Qwen, Claude, Cline y OpenCode.",
+      "stack": [
+        "TypeScript",
+        "CLI"
+      ],
+      "repo": "https://github.com/belentani7/skills-registry"
+    },
+    {
+      "name": "keyrotor",
+      "cat": "devtools",
+      "tier": "PRIME",
+      "desc": "Rotación y gestión de claves API con foco en higiene operativa.",
+      "stack": [
+        "Python",
+        "Security"
+      ],
+      "repo": "https://github.com/belentani7/keyrotor",
+      "live": "https://keyrotor.vercel.app"
+    },
+    {
+      "name": "safe-exec",
+      "cat": "devtools",
+      "tier": "PRIME",
+      "desc": "Ejecuta scripts de terceros con límites y visibilidad antes de darles acceso.",
+      "stack": [
+        "Python",
+        "Security"
+      ],
+      "repo": "https://github.com/belentani7/safe-exec"
+    },
+    {
+      "name": "CARQUIDEC",
+      "cat": "creative",
+      "tier": "OMG",
+      "desc": "Estudio de arquitectura paramétrica: diseño bioclimático y energía asistidos por IA.",
+      "stack": [
+        "HTML",
+        "3D",
+        "AI"
+      ],
+      "repo": "https://github.com/belentani7/CARQUIDEC",
+      "live": "https://carquidec.vercel.app"
+    },
+    {
+      "name": "belentani.es",
+      "cat": "creative",
+      "tier": "OMG",
+      "desc": "Hub de artista: portfolio 3D inmersivo, catálogo musical y universo narrativo.",
+      "stack": [
+        "HTML",
+        "3D",
+        "WebGL"
+      ],
+      "repo": "https://github.com/belentani7/belentani.es",
+      "live": "https://belentani.es"
+    },
+    {
+      "name": "judas-experience",
+      "cat": "creative",
+      "tier": "OMG",
+      "desc": "Experiencia musical interactiva: la obra Judas convertida en interfaz.",
+      "stack": [
+        "HTML",
+        "Audio",
+        "Narrative"
+      ],
+      "repo": "https://github.com/belentani7/judas-experience",
+      "live": "https://judas-experience-v3.vercel.app",
+      "private": true
+    },
+    {
+      "name": "heyduck",
+      "cat": "creative",
+      "tier": "PRIME",
+      "desc": "Hub del universo DUCK: apps, música y herramientas de producción.",
+      "stack": [
+        "HTML",
+        "Audio",
+        "Tools"
+      ],
+      "repo": "https://github.com/belentani7/heyduck",
+      "live": "https://heyduck.vercel.app"
+    },
+    {
+      "name": "omega-max-duck",
+      "cat": "creative",
+      "tier": "PRIME",
+      "desc": "DUCK Ω-MAX Studio OS: CRM, producción musical, operaciones y automatizaciones.",
+      "stack": [
+        "TypeScript",
+        "CRM",
+        "Audio"
+      ],
+      "repo": "https://github.com/belentani7/omega-max-duck"
+    },
+    {
+      "name": "duck-hub",
+      "cat": "creative",
+      "tier": "CORE",
+      "desc": "Portal Astro que conecta todas las apps y herramientas del ecosistema DUCK.",
+      "stack": [
+        "Astro",
+        "TypeScript"
+      ],
+      "repo": "https://github.com/belentani7/duck-hub"
+    },
+    {
+      "name": "nexus-os",
+      "cat": "creative",
+      "tier": "OMG",
+      "desc": "Sistema operativo de navegador con 38+ apps, estética Neon Glass y cero dependencias.",
+      "stack": [
+        "JavaScript",
+        "Web OS"
+      ],
+      "repo": "https://github.com/belentani7/nexus-os",
+      "live": "https://nexus-os-mocha-mu.vercel.app"
+    },
+    {
+      "name": "ia-creativa-lab",
+      "cat": "creative",
+      "tier": "PRIME",
+      "desc": "Veinticuatro proyectos de IA creativa unificados: FireLab, moda, iconos y contenido.",
+      "stack": [
+        "TypeScript",
+        "AI"
+      ],
+      "repo": "https://github.com/belentani7/ia-creativa-lab"
+    },
+    {
+      "name": "ManosAbiertas",
+      "cat": "impact",
+      "tier": "OMG",
+      "desc": "Educación gratuita para migrantes: cursos, CV, derechos y recursos.",
+      "stack": [
+        "TypeScript",
+        "Education"
+      ],
+      "repo": "https://github.com/belentani7/ManosAbiertas",
+      "live": "https://manosabiertas.vercel.app"
+    },
+    {
+      "name": "WILLIAMSCHOOL",
+      "cat": "impact",
+      "tier": "PRIME",
+      "desc": "Plataforma ESO/Bachillerato con puentes PT→ES→CA y compañero de IA.",
+      "stack": [
+        "TypeScript",
+        "Education"
+      ],
+      "repo": "https://github.com/belentani7/WILLIAMSCHOOL",
+      "live": "https://williamschool-livid.vercel.app"
+    },
+    {
+      "name": "lingua-aberta",
+      "cat": "impact",
+      "tier": "OMG",
+      "desc": "Plataforma abierta para jóvenes brasileños en Cataluña: español, catalán, inglés y voz.",
+      "stack": [
+        "TypeScript",
+        "Language"
+      ],
+      "repo": "https://github.com/belentani7/lingua-aberta",
+      "live": "https://lingua-aberta.vercel.app/"
+    },
+    {
+      "name": "linguaforge",
+      "cat": "impact",
+      "tier": "PRIME",
+      "desc": "Forja lingüística: traducción y adaptación multilingüe con herramientas propias.",
+      "stack": [
+        "TypeScript",
+        "Language"
+      ],
+      "repo": "https://github.com/belentani7/linguaforge",
+      "live": "https://linguaforge.vercel.app"
+    },
+    {
+      "name": "Belentani.cv-ai",
+      "cat": "impact",
+      "tier": "PRIME",
+      "desc": "Estudio documental con IA: CVs, cartas y presentaciones, privacidad y pago único.",
+      "stack": [
+        "TypeScript",
+        "AI",
+        "PDF"
+      ],
+      "repo": "https://github.com/belentani7/Belentani.cv-ai",
+      "live": "https://belentani-cv-ai.vercel.app"
+    },
+    {
+      "name": "assurance-pvcu",
+      "cat": "protocols",
+      "tier": "OMG",
+      "desc": "Diez proyectos de validación continua y evidencia: PVC-U, ProofMesh, Evidence Ledger.",
+      "stack": [
+        "TypeScript",
+        "Evidence"
+      ],
+      "repo": "https://github.com/belentani7/assurance-pvcu"
+    },
+    {
+      "name": "qbp-core",
+      "cat": "protocols",
+      "tier": "PRIME",
+      "desc": "SDK del Quadrachy Binding Protocol para definir y validar estructuras.",
+      "stack": [
+        "Python",
+        "Protocol"
+      ],
+      "repo": "https://github.com/belentani7/qbp-core"
+    },
+    {
+      "name": "latent-consistency-bench",
+      "cat": "protocols",
+      "tier": "PRIME",
+      "desc": "Benchmark de consistencia visual en contenido generado por IA.",
+      "stack": [
+        "Python",
+        "Benchmark"
+      ],
+      "repo": "https://github.com/belentani7/latent-consistency-bench",
+      "live": "https://latent-consistency-bench.vercel.app"
+    },
+    {
+      "name": "nexus-machine-ops",
+      "cat": "protocols",
+      "tier": "OMG",
+      "desc": "Infraestructura operativa verificable para trabajo aumentado por humanos.",
+      "stack": [
+        "TypeScript",
+        "Ops"
+      ],
+      "repo": "https://github.com/belentani7/nexus-machine-ops",
+      "live": "https://nexus-machine-ops.vercel.app"
+    }
+  ],
+  "engines": [
+    {
+      "name": "Graphify",
+      "repo": "https://github.com/Graphify-Labs/graphify",
+      "desc": "Convierte código, docs, SQL y PDFs en un knowledge graph consultable. AST local, sin vector store.",
+      "tag": "Knowledge graph",
+      "stars": "136k",
+      "commit": "dac0634",
+      "local": "vendor/graphify"
+    },
+    {
+      "name": "Superpowers",
+      "repo": "https://github.com/obra/superpowers",
+      "desc": "Metodología y skills para agentes: spec, plan, TDD, subagentes y revisión.",
+      "tag": "Agent methodology",
+      "stars": "305k",
+      "commit": "2ce8aa1",
+      "local": "vendor/superpowers"
+    },
+    {
+      "name": "OpenChatX",
+      "repo": "https://github.com/XiaoPuOuO/openchatx-mcp",
+      "desc": "Convierte ChatGPT en un agente local con herramientas, MCP, skills y control del equipo.",
+      "tag": "ChatGPT local agent",
+      "stars": "352",
+      "commit": "8e401ef",
+      "local": "vendor/openchatx-mcp"
+    },
+    {
+      "name": "Codex-Free",
+      "repo": "https://github.com/hypnguyen1209/codex-free",
+      "desc": "Puente MCP local que convierte ChatGPT en un agente de código tipo Codex.",
+      "tag": "ChatGPT → Codex",
+      "stars": "30",
+      "commit": "3085b91",
+      "local": "vendor/codex-free"
+    },
+    {
+      "name": "Swarm",
+      "repo": "https://github.com/belentani7/swarm",
+      "desc": "Prototipo propio de enjambre multiagente en Go; el experimento mínimo de inteligencia colectiva.",
+      "tag": "Prototype",
+      "stars": "0",
+      "commit": "69b1a11",
+      "local": "vendor/swarm"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+vendor/*
+!vendor/manifest.json
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+portal-preview-*.png

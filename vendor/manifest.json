@@ -1,0 +1,46 @@
+{
+  "generated": "2026-10-26",
+  "policy": "Repos externos clonados en vendor/ y fijados por commit. No se publican binarios ni node_modules.",
+  "engines": [
+    {
+      "name": "graphify",
+      "repo": "https://github.com/Graphify-Labs/graphify",
+      "license": "Apache-2.0",
+      "commit": "dac0634",
+      "branch": "v8",
+      "role": "Knowledge graph / AST local"
+    },
+    {
+      "name": "superpowers",
+      "repo": "https://github.com/obra/superpowers",
+      "license": "MIT",
+      "commit": "2ce8aa1",
+      "branch": "main",
+      "role": "Agent skills methodology"
+    },
+    {
+      "name": "openchatx-mcp",
+      "repo": "https://github.com/XiaoPuOuO/openchatx-mcp",
+      "license": "MIT",
+      "commit": "8e401ef",
+      "branch": "main",
+      "role": "ChatGPT local agent runtime"
+    },
+    {
+      "name": "codex-free",
+      "repo": "https://github.com/hypnguyen1209/codex-free",
+      "license": "MIT",
+      "commit": "3085b91",
+      "branch": "master",
+      "role": "ChatGPT to Codex MCP bridge"
+    },
+    {
+      "name": "swarm",
+      "repo": "https://github.com/belentani7/swarm",
+      "license": "MIT",
+      "commit": "69b1a11",
+      "branch": "main",
+      "role": "Multi-agent swarm prototype"
+    }
+  ]
+}
