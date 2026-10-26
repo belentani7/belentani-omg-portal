@@ -4,7 +4,7 @@ Portal de acceso al software de Pedro Belentani. No es un índice plano: es una 
 
 - **Portal:** https://www.belentani.es/belentani-omg-portal/
 - **GitHub:** https://github.com/belentani7/belentani-omg-portal
-- **Inventario:** 420 repos, 132 activos, 288 archivados, 5 madres, 28 seleccionados.
+- **Inventario:** 420 repos, 132 activos, 288 archivados, 5 madres, 25 seleccionados.
 - **Regla:** si no aporta una capacidad única, se archiva. Nada se borra.
 
 ## Estructura
@@ -121,6 +121,7 @@ Los repos con homepage activa se conservaron. Los archivados quedan en solo lect
 ## Seguridad
 
 - No hay claves, tokens ni contraseñas en el portal.
+- Los repos privados no se listan en el catálogo público; se acceden desde GitHub con permisos.
 - No se tocaron los secretos de los repos; las alertas de DEV-TOOLKIT siguen requiriendo rotación manual.
 - Los engines externos se clonaron por HTTPS y se fijaron por commit.
 - No se publican binarios, `node_modules` ni artefactos de build.

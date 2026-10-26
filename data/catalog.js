@@ -5,7 +5,7 @@ window.OMG_CATALOG = {
     active: 132,
     archived: 288,
     mothers: 5,
-    curated: 28,
+    curated: 25,
     engines: 5
   },
   mothers: [
@@ -87,24 +87,6 @@ window.OMG_CATALOG = {
       local: "vendor/swarm"
     },
     {
-      name: "agentbox",
-      cat: "devtools",
-      tier: "OMG",
-      desc: "Sandboxes cloud desechables para agentes: VMs aisladas, Terraform, coste plano.",
-      stack: ["Go", "Terraform"],
-      repo: "https://github.com/belentani7/agentbox",
-      private: true
-    },
-    {
-      name: "agentguard",
-      cat: "devtools",
-      tier: "OMG",
-      desc: "Cortafuegos de presupuesto IA: mide gasto, impone límites y pausa agentes.",
-      stack: ["Python", "Go"],
-      repo: "https://github.com/belentani7/agentguard",
-      private: true
-    },
-    {
       name: "MetaSkill",
       cat: "devtools",
       tier: "OMG",
@@ -169,9 +151,7 @@ window.OMG_CATALOG = {
       tier: "OMG",
       desc: "Experiencia musical interactiva: la obra Judas convertida en interfaz.",
       stack: ["HTML", "Audio", "Narrative"],
-      repo: "https://github.com/belentani7/judas-experience",
-      live: "https://judas-experience-v3.vercel.app",
-      private: true
+      live: "https://judas-experience-v3.vercel.app"
     },
     {
       name: "heyduck",
@@ -282,8 +262,7 @@ window.OMG_CATALOG = {
       tier: "PRIME",
       desc: "Benchmark de consistencia visual en contenido generado por IA.",
       stack: ["Python", "Benchmark"],
-      repo: "https://github.com/belentani7/latent-consistency-bench",
-      live: "https://latent-consistency-bench.vercel.app"
+      repo: "https://github.com/belentani7/latent-consistency-bench"
     },
     {
       name: "nexus-machine-ops",
@@ -293,16 +272,6 @@ window.OMG_CATALOG = {
       stack: ["TypeScript", "Ops"],
       repo: "https://github.com/belentani7/nexus-machine-ops",
       live: "https://nexus-machine-ops.vercel.app"
-    },
-    {
-      name: "UAOL // Máquina Realm",
-      cat: "protocols",
-      tier: "OMG",
-      desc: "Plataforma operacional persistente: gemelo digital, gateway local, cola de comandos, SSE, auditoría y portal de cliente.",
-      stack: ["React", "TypeScript", "Drizzle"],
-      repo: "https://github.com/belentani7/uaol-machine-realm",
-      private: true,
-      archived: true
     }
   ],
   engines: [
