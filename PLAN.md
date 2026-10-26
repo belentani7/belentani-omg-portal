@@ -31,7 +31,7 @@
 - [x] Clonar `hypnguyen1209/codex-free` en `vendor/codex-free` (`3085b91`), el "turn ChatGPT into Codex".
 - [x] Clonar `belentani7/swarm` en `vendor/swarm` (`69b1a11`), el prototipo.
 - [x] Fijar commits, licencias y URLs en `vendor/manifest.json`.
-- [ ] Ejecutar Graphify sobre el workspace cuando haya Python/uv disponible y guardar `graphify-out/`. Clon y commit ya fijados; falta runtime Python.
+- [x] Ejecutar Graphify sobre el workspace con Python 3.12/uv y guardar `graph/` (35 nodos, 29 edges, 6 comunidades).
 
 ## Fase 2 — Portal
 

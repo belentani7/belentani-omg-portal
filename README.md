@@ -20,6 +20,10 @@ belentani-omg-portal/
 ├─ data/
 │  ├─ catalog.js
 │  └─ catalog.json
+├─ graph/
+│  ├─ index.html
+│  ├─ graph.json
+│  └─ GRAPH_REPORT.md
 ├─ vendor/
 │  ├─ manifest.json
 │  ├─ graphify/
@@ -66,6 +70,15 @@ git clone --depth 1 https://github.com/XiaoPuOuO/openchatx-mcp.git vendor/opench
 git clone --depth 1 https://github.com/hypnguyen1209/codex-free.git vendor/codex-free
 git clone --depth 1 https://github.com/belentani7/swarm.git vendor/swarm
 ```
+
+## Knowledge graph
+
+El portal incluye una visualización interactiva generada con Graphify sobre su propio código.
+
+- **URL:** https://www.belentani.es/belentani-omg-portal/graph/
+- **Grafo:** 35 nodos, 29 edges, 6 comunidades.
+- **Fuente:** `graph/index.html`, `graph/graph.json`, `graph/GRAPH_REPORT.md`.
+- **Reproducir:** `graphify update . --no-cluster` y `graphify cluster-only . --no-label` con el runtime fijado en `vendor/manifest.json`.
 
 ## Preview local
 
