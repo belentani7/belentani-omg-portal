@@ -10,15 +10,16 @@ Portal de acceso al software de Pedro Belentani. No es un índice plano: es una 
 ## Estructura
 
 ```text
-omg-software-atlas/
-├─ portal/
-│  ├─ index.html
-│  ├─ assets/
-│  │  ├─ style.css
-│  │  └─ app.js
-│  └─ data/
-│     ├─ catalog.js
-│     └─ catalog.json
+belentani-omg-portal/
+├─ index.html
+├─ assets/
+│  ├─ style.css
+│  ├─ app.js
+│  ├─ icon.svg
+│  └─ og.png
+├─ data/
+│  ├─ catalog.js
+│  └─ catalog.json
 ├─ vendor/
 │  ├─ manifest.json
 │  ├─ graphify/
@@ -26,11 +27,13 @@ omg-software-atlas/
 │  ├─ openchatx-mcp/
 │  ├─ codex-free/
 │  └─ swarm/
+├─ .nojekyll
 ├─ PLAN.md
+├─ DEDUPE.md
 └─ README.md
 ```
 
-`portal/data/catalog.js` es la fuente de verdad del catálogo. `catalog.json` es la exportación para consumo externo.
+`data/catalog.js` es la fuente de verdad del catálogo. `data/catalog.json` es la exportación para consumo externo.
 
 ## Las cinco madres
 
@@ -67,12 +70,12 @@ git clone --depth 1 https://github.com/belentani7/swarm.git vendor/swarm
 ## Preview local
 
 ```powershell
-npx --yes serve portal -l 4173
+npx --yes serve . -l 4173
 ```
 
 Abre `http://localhost:4173`.
 
-También funciona abriendo `portal/index.html`, porque el catálogo se carga como JS y no depende de `fetch`.
+También funciona abriendo `index.html`, porque el catálogo se carga como JS y no depende de `fetch`.
 
 ## Deploy
 
@@ -87,11 +90,11 @@ Si Pages ya existe, se actualiza con `PUT` en lugar de `POST`.
 
 ## Añadir o quitar un proyecto
 
-1. Edita `portal/data/catalog.js`.
+1. Edita `data/catalog.js`.
 2. Exporta el JSON:
 
 ```powershell
-node -e "global.window={};require('./portal/data/catalog.js');require('fs').writeFileSync('./portal/data/catalog.json',JSON.stringify(window.OMG_CATALOG,null,2))"
+node -e "global.window={};require('./data/catalog.js');require('fs').writeFileSync('./data/catalog.json',JSON.stringify(window.OMG_CATALOG,null,2))"
 ```
 
 3. Revisa que el repo sea único, tenga demo o código real y no duplique una madre.
@@ -99,7 +102,7 @@ node -e "global.window={};require('./portal/data/catalog.js');require('fs').writ
 
 ## Dedupe aplicado
 
-Se archivaron 29 repos de bajo valor o duplicados, sin borrar historia:
+Se archivaron 29 repos de bajo valor o duplicados, sin borrar historia. El detalle está en `DEDUPE.md`.
 
 - Iteraciones DUCK antiguas y snapshots privados.
 - Portfolios y demos duplicados.

@@ -35,15 +35,15 @@
 
 ## Fase 2 — Portal
 
-- [x] Crear `portal/index.html` con hero, manifiesto, madres, atlas, engines y dedupe.
-- [x] Crear `portal/assets/style.css` con estética OMG, responsive y reduced-motion.
-- [x] Crear `portal/assets/app.js` con búsqueda, filtros, tilt, reveal, contadores y canvas.
-- [x] Crear `portal/data/catalog.js` con 27 proyectos curados y 5 engines.
-- [x] Exportar `portal/data/catalog.json`.
+- [x] Crear `index.html` con hero, manifiesto, madres, atlas, engines y dedupe.
+- [x] Crear `assets/style.css` con estética OMG, responsive y reduced-motion.
+- [x] Crear `assets/app.js` con búsqueda, filtros, tilt, reveal, contadores y canvas.
+- [x] Crear `data/catalog.js` con 27 proyectos curados y 5 engines.
+- [x] Exportar `data/catalog.json`.
 - [x] Añadir metadatos, Open Graph, favicon y JSON-LD.
 - [x] Crear repo `belentani-omg-portal`.
-- [ ] Publicar en GitHub Pages.
-- [ ] Verificar en móvil, desktop, Lighthouse y enlaces.
+- [x] Publicar en GitHub Pages en `main` raíz `/`.
+- [x] Verificar en móvil (390px) y desktop (1440px) con Puppeteer, sin overflow ni errores de consola.
 
 ## Fase 3 — Madres
 
@@ -67,12 +67,12 @@
 
 ## Fase 5 — Publicación
 
-- [ ] Crear repo público `belentani-omg-portal`.
-- [ ] Push de `portal/`, `README.md`, `PLAN.md`, `vendor/manifest.json`.
-- [ ] Activar Pages desde `main` `/`.
+- [x] Crear repo público `belentani-omg-portal`.
+- [x] Push de `index.html`, `assets/`, `data/`, `README.md`, `PLAN.md`, `vendor/manifest.json`.
+- [x] Activar Pages desde `main` `/`.
 - [ ] Verificar `https://www.belentani.es/belentani-omg-portal/`.
-- [ ] Añadir homepage del portal a las cuatro madres.
-- [ ] Verificar redirecciones de los nombres antiguos.
+- [x] Añadir homepage del portal a las cuatro madres.
+- [x] Verificar redirecciones de los nombres antiguos.
 
 ## Fase 6 — Seguridad y cierre
 
