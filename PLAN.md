@@ -70,7 +70,7 @@
 - [ ] Crear repo público `belentani-omg-portal`.
 - [ ] Push de `portal/`, `README.md`, `PLAN.md`, `vendor/manifest.json`.
 - [ ] Activar Pages desde `main` `/`.
-- [ ] Verificar `https://belentani7.github.io/belentani-omg-portal/`.
+- [ ] Verificar `https://www.belentani.es/belentani-omg-portal/`.
 - [ ] Añadir homepage del portal a las cuatro madres.
 - [ ] Verificar redirecciones de los nombres antiguos.
 

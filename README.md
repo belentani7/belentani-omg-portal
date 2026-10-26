@@ -2,7 +2,7 @@
 
 Portal de acceso al software de Pedro Belentani. No es un índice plano: es una capa frontend sobre cinco repos madres, engines externos clonados y un catálogo curado.
 
-- **Portal:** https://belentani7.github.io/belentani-omg-portal/
+- **Portal:** https://www.belentani.es/belentani-omg-portal/
 - **GitHub:** https://github.com/belentani7/belentani-omg-portal
 - **Inventario:** 420 repos, 132 activos, 288 archivados, 5 madres, 27 seleccionados.
 - **Regla:** si no aporta una capacidad única, se archiva. Nada se borra.
