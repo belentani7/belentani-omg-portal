@@ -52,8 +52,8 @@
 - [x] Renombrar `music-os` → `backend_aportaciones_software03`.
 - [x] Renombrar `negocio-automatizacion` → `backend_aportaciones_software04`.
 - [ ] Añadir `MOTHER.md` a cada madre con familia, portal y política.
-- [ ] Actualizar descripción, homepage y topics de cada madre.
-- [ ] Marcar relaciones: 01 agentes, 02 devtools, 03 creative, 04 negocio.
+- [x] Actualizar descripción, homepage y topics de cada madre.
+- [x] Marcar relaciones: 01 agentes, 02 devtools, 03 creative, 04 negocio.
 - [ ] Evaluar mover submodules o paquetes compartidos a las madres en una segunda pasada.
 
 ## Fase 4 — Dedupe

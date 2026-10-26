@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   "use strict";
 
   const DATA = window.OMG_CATALOG;
@@ -56,7 +56,7 @@
           <p class="mother-desc">${esc(mother.desc)}</p>
           <div class="mother-foot">
             ${stackMarkup(mother.stack)}
-            <a class="arrow-link" href="${esc(safeUrl(mother.repo))}" target="_blank" rel="noreferrer">ABRIR â†—</a>
+            <a class="arrow-link" href="${esc(safeUrl(mother.repo))}" target="_blank" rel="noreferrer">ABRIR ↗</a>
           </div>
         </div>
       </article>
@@ -112,8 +112,8 @@
           <div class="project-foot">
             ${stackMarkup(project.stack)}
             <div class="project-links">
-              ${live ? `<a class="project-link" href="${esc(live)}" target="_blank" rel="noreferrer">DEMO â†—</a>` : ""}
-              ${repo ? `<a class="project-link${live ? " project-link-muted" : ""}" href="${esc(repo)}" target="_blank" rel="noreferrer">CÃ“DIGO â†—</a>` : ""}
+              ${live ? `<a class="project-link" href="${esc(live)}" target="_blank" rel="noreferrer">DEMO ↗</a>` : ""}
+              ${repo ? `<a class="project-link${live ? " project-link-muted" : ""}" href="${esc(repo)}" target="_blank" rel="noreferrer">CÓDIGO ↗</a>` : ""}
             </div>
           </div>
         </article>
@@ -133,8 +133,8 @@
         <h3 class="engine-name">${esc(engine.name)}</h3>
         <p class="engine-desc">${esc(engine.desc)}</p>
         <div class="engine-meta">
-          <span>â˜… ${esc(engine.stars)}</span>
-          <a href="${esc(safeUrl(engine.repo))}" target="_blank" rel="noreferrer">${esc(engine.commit)} â†—</a>
+          <span>★ ${esc(engine.stars)}</span>
+          <a href="${esc(safeUrl(engine.repo))}" target="_blank" rel="noreferrer">${esc(engine.commit)} ↗</a>
         </div>
       </article>
     `).join("");
