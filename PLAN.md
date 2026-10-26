@@ -38,7 +38,7 @@
 - [x] Crear `index.html` con hero, manifiesto, madres, atlas, engines y dedupe.
 - [x] Crear `assets/style.css` con estética OMG, responsive y reduced-motion.
 - [x] Crear `assets/app.js` con búsqueda, filtros, tilt, reveal, contadores y canvas.
-- [x] Crear `data/catalog.js` con 27 proyectos curados y 5 engines.
+- [x] Crear `data/catalog.js` con 28 proyectos curados y 5 engines.
 - [x] Exportar `data/catalog.json`.
 - [x] Añadir metadatos, Open Graph, favicon y JSON-LD.
 - [x] Crear repo `belentani-omg-portal`.
@@ -109,7 +109,7 @@ gh api --method PUT /repos/belentani7/REPO/topics -f names[]=omg -f names[]=bele
 
 - Portal accesible y navegable en desktop y móvil.
 - 5 madres con nombre canónico y enlace al portal.
-- 27 proyectos curados con enlaces válidos.
+- 28 proyectos curados con enlaces válidos.
 - 29 repos archivados sin romper homepages.
 - Cero secretos en el repo del portal.
 - Un comando documentado para preview, deploy y rollback.

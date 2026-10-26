@@ -5,7 +5,7 @@ window.OMG_CATALOG = {
     active: 132,
     archived: 288,
     mothers: 5,
-    curated: 27,
+    curated: 28,
     engines: 5
   },
   mothers: [
@@ -293,6 +293,16 @@ window.OMG_CATALOG = {
       stack: ["TypeScript", "Ops"],
       repo: "https://github.com/belentani7/nexus-machine-ops",
       live: "https://nexus-machine-ops.vercel.app"
+    },
+    {
+      name: "UAOL // Máquina Realm",
+      cat: "protocols",
+      tier: "OMG",
+      desc: "Plataforma operacional persistente: gemelo digital, gateway local, cola de comandos, SSE, auditoría y portal de cliente.",
+      stack: ["React", "TypeScript", "Drizzle"],
+      repo: "https://github.com/belentani7/uaol-machine-realm",
+      private: true,
+      archived: true
     }
   ],
   engines: [

@@ -42,5 +42,17 @@
       "branch": "main",
       "role": "Multi-agent swarm prototype"
     }
+  ],
+  "sources": [
+    {
+      "name": "uaol-machine-realm",
+      "repo": "https://github.com/belentani7/uaol-machine-realm",
+      "license": "MIT",
+      "commit": "918e1ba",
+      "branch": "main",
+      "role": "Persistent operational twin platform",
+      "private": true,
+      "archived": true
+    }
   ]
 }
