@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todos los repositorios — Belentani Software Atlas</title>
+  <meta name="description" content="Índice completo de los 420 repositorios de Pedro Belentani: agentes, devtools, creative tech, educación, protocolos y productos. Busca, filtra y encuentra el código.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="Todos los repositorios — Belentani Software Atlas">
+  <meta property="og:description" content="420 repositorios, 93 públicos, 40 con demo. Un solo índice para encontrar todo el código.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.belentani.es/belentani-omg-portal/repos.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://www.belentani.es/belentani-omg-portal/assets/og.png">
+  <meta name="twitter:image" content="https://www.belentani.es/belentani-omg-portal/assets/og.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="canonical" href="https://www.belentani.es/belentani-omg-portal/repos.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/repos.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Todos los repositorios — Belentani Software Atlas",
+    "url": "https://www.belentani.es/belentani-omg-portal/repos.html",
+    "description": "Índice completo de los repositorios de Pedro Belentani.",
+    "isPartOf": { "@type": "WebSite", "name": "Belentani", "url": "https://belentani.es" }
+  }
+  </script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="Belentani OMG Atlas">
+      <span class="brand-mark">B//</span>
+      <span class="brand-text">OMG ATLAS</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="./index.html#mothers">MADRES</a>
+      <a href="./index.html#atlas">ATLAS</a>
+      <a href="./repos.html" aria-current="page">REPOS</a>
+      <a href="./graph/">GRAFO</a>
+    </nav>
+    <a class="header-cta" href="https://github.com/belentani7" target="_blank" rel="noreferrer">GITHUB ↗</a>
+  </header>
+
+  <main>
+    <section class="repos-hero">
+      <div>
+        <p class="eyebrow"><span class="pulse"></span> REPOSITORY INDEX / LIVE / 2026</p>
+        <h1>Todo el código.<br><span class="repos-accent">Un solo índice.</span></h1>
+        <p class="lede">Los <strong data-total>420</strong> repositorios de <strong>belentani7</strong>, incluidos los privados y los archivados. Busca por nombre, descripción, tema o lenguaje. Encuentra el código, la demo o el contexto.</p>
+        <div class="hero-actions">
+          <a class="btn btn-acid" href="#finder">BUSCAR UN REPO</a>
+          <a class="btn btn-ghost" href="./index.html">VOLVER AL ATLAS</a>
+        </div>
+        <dl class="repos-stats" aria-label="Métricas de repositorios">
+          <div><dt data-total>420</dt><dd>repos</dd></div>
+          <div><dt data-public>93</dt><dd>públicos</dd></div>
+          <div><dt data-live>40</dt><dd>con demo</dd></div>
+          <div><dt data-archived>287</dt><dd>archivados</dd></div>
+        </dl>
+      </div>
+      <aside class="repos-note">
+        <p class="note-label">CÓMO LEERLO</p>
+        <p>Los repos privados aparecen con su nombre y descripción, pero el enlace solo funciona si tienes acceso. Los archivados se conservan como historia, no como producto activo.</p>
+        <p class="note-meta">Datos generados desde la API de GitHub · <span data-generated>2026-10-27</span></p>
+      </aside>
+    </section>
+
+    <section id="finder" class="finder-section" aria-labelledby="finder-title">
+      <div class="finder-head">
+        <div>
+          <p class="section-index">01 / FINDER</p>
+          <h2 id="finder-title">Encuentra el repo.</h2>
+          <p class="section-note">Filtra por categoría, lenguaje, visibilidad o estado. La búsqueda mira nombre, descripción y temas.</p>
+        </div>
+        <p class="finder-count" id="repo-count" role="status" aria-live="polite">Cargando…</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="toolbar-search">
+          <span class="sr-only">Buscar repositorios</span>
+          <input id="repo-search" type="search" placeholder="Buscar por nombre, descripción o tema…" autocomplete="off">
+        </label>
+        <label>Categoría
+          <select id="repo-category">
+            <option value="all">Todas</option>
+          </select>
+        </label>
+        <label>Lenguaje
+          <select id="repo-language">
+            <option value="all">Todos</option>
+          </select>
+        </label>
+        <label>Estado
+          <select id="repo-visibility">
+            <option value="all">Todos</option>
+            <option value="public">Públicos</option>
+            <option value="private">Privados</option>
+            <option value="live">Con demo</option>
+            <option value="archived">Archivados</option>
+            <option value="fork">Forks</option>
+          </select>
+        </label>
+        <label>Orden
+          <select id="repo-sort">
+            <option value="updated">Actualizados</option>
+            <option value="name">Nombre A–Z</option>
+            <option value="stars">Más estrellas</option>
+            <option value="language">Lenguaje</option>
+          </select>
+        </label>
+        <button id="repo-reset" type="button" class="btn btn-ghost toolbar-reset">LIMPIAR</button>
+      </div>
+
+      <div id="repo-list" class="repo-list"></div>
+      <div id="repo-empty" class="repo-empty" hidden>
+        <p>No hay repositorios con esos filtros.</p>
+        <button type="button" class="btn btn-acid" id="repo-empty-reset">QUITAR FILTROS</button>
+      </div>
+      <div class="repo-more">
+        <button id="repo-more" type="button" class="btn btn-ghost" hidden>CARGAR MÁS</button>
+        <p class="repo-footnote">Los datos se generan con <code>scripts/generate-repos.mjs</code> desde la API de GitHub. Última generación: <span data-generated>2026-10-27</span>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="brand-mark">B//</span>
+      <p>BELENTANI<br>SOFTWARE ATLAS</p>
+    </div>
+    <p class="footer-note">Diseñado para ser visto. Construido para ser usado. 2026.</p>
+    <div class="footer-links">
+      <a href="https://github.com/belentani7" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="https://belentani.es" target="_blank" rel="noreferrer">belentani.es ↗</a>
+      <a href="./index.html">Atlas ↗</a>
+    </div>
+  </footer>
+
+  <script src="./data/repos.js"></script>
+  <script src="./assets/repos.js"></script>
+</body>
+</html>

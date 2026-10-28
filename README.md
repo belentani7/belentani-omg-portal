@@ -7,6 +7,16 @@ Portal de acceso al software de Pedro Belentani. No es un índice plano: es una 
 - **Inventario:** 420 repos, 132 activos, 288 archivados, 5 madres, 25 seleccionados.
 - **Regla:** si no aporta una capacidad única, se archiva. Nada se borra.
 
+## Índice completo de repositorios
+
+Además del atlas curado, el portal incluye un buscador de **todos los repositorios** de `belentani7`:
+
+- **URL:** https://www.belentani.es/belentani-omg-portal/repos.html
+- **Datos:** `data/repos.js` / `data/repos.json` (420 repos, 93 públicos, 40 con demo, 287 archivados).
+- **Generación:** `node scripts/generate-repos.mjs` (usa `gh repo list`, no inventa métricas).
+- **Filtros:** texto, categoría, lenguaje, visibilidad (público/privado/demo/archivado/fork) y orden.
+- **Enlace compartido:** la URL guarda `q`, `cat`, `lang`, `state` y `sort`.
+
 ## Estructura
 
 ```text

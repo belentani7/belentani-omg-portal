@@ -113,3 +113,13 @@ gh api --method PUT /repos/belentani7/REPO/topics -f names[]=omg -f names[]=bele
 - 29 repos archivados sin romper homepages.
 - Cero secretos en el repo del portal.
 - Un comando documentado para preview, deploy y rollback.
+
+## Fase 7 — Índice completo de repositorios (2026-10-27)
+
+- [x] Generar data/repos.js y data/repos.json con los 420 repos desde gh repo list (scripts/generate-repos.mjs).
+- [x] Crear epos.html con buscador, categorías, lenguaje, visibilidad, estado y orden.
+- [x] Añadir REPOS al nav y CTA principal del atlas.
+- [x] Estilos responsive (ssets/repos.css) y estado compartible por URL.
+- [x] Enlazar el índice desde el perfil de GitHub.
+- [ ] Enlazar el índice desde el README de cada repo (script de propagación).
+
