@@ -79,7 +79,7 @@
     const languageCounts = countBy(DATA.repos, "language");
 
     Object.entries(CATEGORY_LABELS)
-      .filter(([key]) => key === "all" || categoryCounts[key])
+      .filter(([key]) => key !== "all" && categoryCounts[key])
       .forEach(([key, label]) => {
         const option = document.createElement("option");
         option.value = key;
@@ -202,7 +202,9 @@
     state.query = params.get("q") || "";
     state.category = params.get("cat") || "all";
     state.language = params.get("lang") || "all";
-    state.visibility = params.get("state") || "all";
+    const requestedState = params.get("state") || "all";
+    state.visibility = ["all", "public", "live", "archived", "fork"].includes(requestedState)
+      ? requestedState : "all";
     state.sort = params.get("sort") || "updated";
   };
 
