@@ -1,9 +1,10 @@
 window.OMG_CATALOG = {
-  generated: "2026-10-26",
+  generated: "2026-10-29",
+  scope: "public-only",
   totals: {
-    repos: 420,
-    active: 132,
-    archived: 288,
+    repos: 94,
+    active: 79,
+    archived: 15,
     mothers: 5,
     curated: 25,
     engines: 5
