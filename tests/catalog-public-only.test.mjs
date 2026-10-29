@@ -110,3 +110,11 @@ test("live refresh has privacy-safe scripts and a visible, accessible offline fa
   assert.match(browser, /catch \{/);
   assert.doesNotMatch(browser, /Authorization|Bearer |api[_-]?key/i);
 });
+
+test("dynamic filter options cannot duplicate All or resurrect private filters", () => {
+  const browser = read("assets/repos.js");
+  const page = read("repos.html");
+  assert.match(browser, /key !== "all" && categoryCounts\[key\]/);
+  assert.match(browser, /\["all", "public", "live", "archived", "fork"\]\.includes\(requestedState\)/);
+  assert.doesNotMatch(page, /<option value="private">/);
+});
