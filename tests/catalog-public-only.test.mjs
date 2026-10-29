@@ -54,3 +54,59 @@ test("public HTML does not misrepresent private repositories or live demos", () 
   assert.doesNotMatch(html, /Los repos privados aparecen/i);
   assert.match(html, /URL declarada|web declarada/i);
 });
+
+test("anonymous metadata enrichment accepts only public owner repositories", async () => {
+  const { createRequire } = await import("node:module");
+  const require = createRequire(import.meta.url);
+  const core = require("../assets/public-repos-core.js");
+  const publicEntry = (name, extra = {}) => ({
+    name,
+    owner: { login: "belentani7" },
+    html_url: "https://github.com/belentani7/" + name,
+    private: false,
+    archived: false,
+    fork: false,
+    language: "TypeScript",
+    stargazers_count: 0,
+    description: "Real public project",
+    homepage: "https://example.com",
+    updated_at: "2026-10-29T08:00:00Z",
+    topics: ["open-source"],
+    size: 24,
+    ...extra
+  });
+  const sample = [publicEntry("ManosAbiertas"), publicEntry("Belentani.cv-ai", { archived: true })];
+  const result = core.fromGitHub(sample, index);
+  assert.ok(result);
+  assert.equal(result.totals.total, 2);
+  assert.equal(result.totals.public, 2);
+  assert.equal(result.totals.private, 0);
+  assert.equal(result.totals.archived, 1);
+  assert.equal(result.totals.live, 2);
+  assert.equal(result.repos[0].category, "impact");
+  assert.deepEqual(result.repos[0].topics, ["open-source"]);
+  assert.equal(result.repos[0].desc, "Real public project");
+  assert.equal(result.repos[0].private, false);
+  assert.deepEqual(result.repos[0].url, "https://github.com/belentani7/ManosAbiertas");
+
+  assert.equal(core.fromGitHub([publicEntry("Private", { private: true })], index), null);
+  assert.equal(core.fromGitHub([publicEntry("Other", { owner: { login: "another-account" } })], index), null);
+  assert.equal(core.fromGitHub([publicEntry("Wrong", { html_url: "https://example.com/wrong" })], index), null);
+  assert.equal(core.fromGitHub([publicEntry("Bad", { name: "<script>" })], index), null);
+  assert.equal(core.fromGitHub([publicEntry("Duplicate"), publicEntry("Duplicate")], index), null);
+  assert.equal(core.fromGitHub(Array.from({ length: 100 }, (_, i) => publicEntry("p" + i)), index), null);
+  assert.equal(core.fromGitHub([], index), null);
+});
+
+test("live refresh has privacy-safe scripts and a visible, accessible offline fallback", () => {
+  const browser = read("assets/repos.js");
+  const page = read("repos.html");
+  assert.match(page, /src="\.\/assets\/public-repos-core\.js"/);
+  assert.match(page, /id="repo-source" role="status" aria-live="polite"/);
+  assert.match(browser, /core\.fromGitHub\(payload, DATA\)/);
+  assert.match(browser, /credentials: "omit"/);
+  assert.match(browser, /if \(!response\.ok\) return/);
+  assert.match(browser, /if \(!refreshed\) return/);
+  assert.match(browser, /catch \{/);
+  assert.doesNotMatch(browser, /Authorization|Bearer |api[_-]?key/i);
+});
