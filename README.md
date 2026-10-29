@@ -4,17 +4,17 @@ Portal de acceso al software de Pedro Belentani. No es un índice plano: es una 
 
 - **Portal:** https://www.belentani.es/belentani-omg-portal/
 - **GitHub:** https://github.com/belentani7/belentani-omg-portal
-- **Inventario:** 420 repos, 132 activos, 288 archivados, 5 madres, 25 seleccionados.
-- **Regla:** si no aporta una capacidad única, se archiva. Nada se borra.
+- **Inventario navegable (29-10-2026):** 94 repositorios **públicos** (79 activos, 15 archivados). El resto de proyectos de la cuenta no se incluye en archivos estáticos públicos. Las cinco madres y los 25 destacados son una curaduría distinta.
+- **Regla:** no publicar nombres, descripciones ni URLs de repositorios privados; preservar su historial y acceso restringido.
 
 ## Índice completo de repositorios
 
-Además del atlas curado, el portal incluye un buscador de **todos los repositorios** de `belentani7`:
+Además del atlas curado, el portal incluye un buscador de los **repositorios públicos** de `belentani7`. No es una lista de proyectos privados:
 
 - **URL:** https://www.belentani.es/belentani-omg-portal/repos.html
-- **Datos:** `data/repos.js` / `data/repos.json` (420 repos, 93 públicos, 40 con demo, 287 archivados).
-- **Generación:** `node scripts/generate-repos.mjs` (usa `gh repo list`, no inventa métricas).
-- **Filtros:** texto, categoría, lenguaje, visibilidad (público/privado/demo/archivado/fork) y orden.
+- **Datos:** `data/repos.js` / `data/repos.json` (94 registros públicos, 15 archivados y 24 con URL web declarada; disponibilidad web no verificada).
+- **Generación:** `node scripts/generate-repos.mjs` (usa `gh repo list`, filtra los registros privados **antes** de escribir archivos públicos y no infiere disponibilidad web).
+- **Filtros:** texto, categoría, lenguaje, web declarada/archivado/fork y orden. No existe búsqueda pública de privados.
 - **Enlace compartido:** la URL guarda `q`, `cat`, `lang`, `state` y `sort`.
 
 ## Estructura
