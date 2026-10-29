@@ -15,6 +15,9 @@ Además del atlas curado, el portal incluye un buscador de los **repositorios p�
 - **Datos:** `data/repos.js` / `data/repos.json` (94 registros públicos, 15 archivados y 24 con URL web declarada; disponibilidad web no verificada).
 - **Generación:** `node scripts/generate-repos.mjs` (usa `gh repo list`, filtra los registros privados **antes** de escribir archivos públicos y no infiere disponibilidad web).
 - **Filtros:** texto, categoría, lenguaje, web declarada/archivado/fork y orden. No existe búsqueda pública de privados.
+- **Actualización progresiva:** al abrir `repos.html`, el navegador puede consultar de forma **anónima** `https://api.github.com/users/belentani7/repos?type=owner&per_page=100&sort=updated`. Solo se aceptan respuestas completas de repositorios públicos propiedad de `belentani7`; las respuestas privadas, parciales o no válidas se descartan. La instantánea estática sigue disponible sin red y no requiere tokens.
+- **Privacidad del visitante:** esta consulta opcional contacta directamente a GitHub y está sujeta a sus límites de API y políticas de privacidad; no se envían credenciales ni ficheros del visitante. El campo «web declarada» refleja la URL indicada por el propietario del repositorio y **no** constituye una prueba de disponibilidad.
+- **Regresión:** `node --test tests/catalog-public-only.test.mjs` y el workflow `atlas-public-catalog.yml` verifican que las salidas estáticas no incluyan repositorios privados, que la API pública se trate con validación estricta y que el navegador conserve un modo sin conexión.
 - **Enlace compartido:** la URL guarda `q`, `cat`, `lang`, `state` y `sort`.
 
 ## Estructura
