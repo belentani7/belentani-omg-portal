@@ -68,7 +68,7 @@
       <aside class="repos-note">
         <p class="note-label">CÓMO LEERLO</p>
         <p>Sólo se muestran repositorios públicos. Los archivados se identifican como históricos. «Con web» significa URL declarada en GitHub, no despliegue probado.</p>
-        <p class="note-meta">Datos generados desde la API de GitHub · <span data-generated>2026-10-29</span></p>
+        <p class="note-meta" id="repo-source" role="status" aria-live="polite">Instantánea pública guardada: <span data-generated>2026-10-29</span>. Se intentará actualizar de forma anónima; si falla, el buscador seguirá funcionando.</p>
       </aside>
     </section>
 
@@ -77,7 +77,7 @@
         <div>
           <p class="section-index">01 / FINDER</p>
           <h2 id="finder-title">Encuentra el repo.</h2>
-          <p class="section-note">Filtra por categoría, lenguaje, visibilidad o estado. La búsqueda mira nombre, descripción y temas.</p>
+          <p class="section-note">Filtra por categoría, lenguaje y estado. La búsqueda mira nombre, descripción y temas, también sin conexión a GitHub.</p>
         </div>
         <p class="finder-count" id="repo-count" role="status" aria-live="polite">Cargando…</p>
       </div>
@@ -124,7 +124,7 @@
       </div>
       <div class="repo-more">
         <button id="repo-more" type="button" class="btn btn-ghost" hidden>CARGAR MÁS</button>
-        <p class="repo-footnote">Los datos se generan con <code>scripts/generate-repos.mjs</code> desde la API de GitHub. Última generación: <span data-generated>2026-10-29</span>.</p>
+        <p class="repo-footnote">La instantánea pública se genera con <code>scripts/generate-repos.mjs</code>; fecha: <span data-generated>2026-10-29</span>. Si GitHub responde, el catálogo incorpora metadatos públicos más recientes sin almacenar información privada.</p>
       </div>
     </section>
   </main>
@@ -143,6 +143,7 @@
   </footer>
 
   <script src="./data/repos.js"></script>
+  <script src="./assets/public-repos-core.js"></script>
   <script src="./assets/repos.js"></script>
 </body>
 </html>
