@@ -9,6 +9,8 @@ on:
       - 'data/catalog.json'
       - 'data/catalog.js'
       - 'repos.html'
+      - 'assets/repos.js'
+      - 'assets/public-repos-core.js'
       - 'index.html'
       - 'scripts/generate-repos.mjs'
       - 'tests/catalog-public-only.test.mjs'
@@ -20,6 +22,8 @@ on:
       - 'data/catalog.json'
       - 'data/catalog.js'
       - 'repos.html'
+      - 'assets/repos.js'
+      - 'assets/public-repos-core.js'
       - 'index.html'
       - 'scripts/generate-repos.mjs'
       - 'tests/catalog-public-only.test.mjs'
@@ -37,5 +41,9 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
+      - name: Validate browser JavaScript syntax
+        run: |
+          node --check assets/repos.js
+          node --check assets/public-repos-core.js
       - name: Validate catalog privacy and source consistency
         run: node --test tests/catalog-public-only.test.mjs
