@@ -54,14 +54,9 @@
     }
   };
 
-  const categoryCounts = DATA.repos.reduce((acc, repo) => {
-    acc[repo.category] = (acc[repo.category] || 0) + 1;
-    return acc;
-  }, {});
-
-  const languageCounts = DATA.repos.reduce((acc, repo) => {
-    const key = repo.language || "Sin lenguaje";
-    acc[key] = (acc[key] || 0) + 1;
+  const countBy = (items, key) => items.reduce((acc, repo) => {
+    const name = repo[key] || (key === "language" ? "Sin lenguaje" : "products");
+    acc[name] = (acc[name] || 0) + 1;
     return acc;
   }, {});
 
@@ -77,6 +72,11 @@
     const category = $("#repo-category");
     const language = $("#repo-language");
     if (!category || !language) return;
+    // Rebuild options when anonymous public GitHub metadata refreshes the snapshot.
+    category.replaceChildren(category.querySelector('option[value="all"]'));
+    language.replaceChildren(language.querySelector('option[value="all"]'));
+    const categoryCounts = countBy(DATA.repos, "category");
+    const languageCounts = countBy(DATA.repos, "language");
 
     Object.entries(CATEGORY_LABELS)
       .filter(([key]) => key === "all" || categoryCounts[key])
@@ -95,6 +95,10 @@
         option.textContent = `${key} (${count})`;
         language.append(option);
       });
+    if (![...category.options].some(option => option.value === state.category)) state.category = "all";
+    if (![...language.options].some(option => option.value === state.language)) state.language = "all";
+    category.value = state.category;
+    language.value = state.language;
   };
 
   const matches = (repo) => {
@@ -269,9 +273,48 @@
     emptyReset?.addEventListener("click", clear);
   };
 
+  // Optional anonymous refresh: the complete, public GitHub API listing can
+  // enrich the published snapshot. Network errors, rate limits and partial pages
+  // must never hide the offline-friendly fallback.
+  const refreshPublic = async () => {
+    const core = window.OMG_PUBLIC_REPOS_CORE;
+    if (!core || typeof window.fetch !== "function") return;
+    const status = $("#repo-source");
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 6500);
+    try {
+      const response = await window.fetch(
+        "https://api.github.com/users/belentani7/repos?type=owner&per_page=100&sort=updated",
+        {
+          method: "GET",
+          headers: { Accept: "application/vnd.github+json" },
+          credentials: "omit",
+          mode: "cors",
+          cache: "no-store",
+          signal: controller.signal
+        }
+      );
+      if (!response.ok) return;
+      const payload = await response.json();
+      const refreshed = core.fromGitHub(payload, DATA);
+      if (!refreshed) return;
+      DATA.repos = refreshed.repos;
+      DATA.totals = refreshed.totals;
+      applyStats();
+      applyFilters();
+      render();
+      if (status) status.textContent = "Datos públicos actualizados desde GitHub. Sin claves ni acceso a repositorios privados.";
+    } catch {
+      // Keep the verified static catalog usable when network/API access fails.
+    } finally {
+      window.clearTimeout(timeout);
+    }
+  };
+
   restore();
   applyStats();
   applyFilters();
   bind();
   render();
+  void refreshPublic();
 })();
