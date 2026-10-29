@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Todos los repositorios — Belentani Software Atlas</title>
-  <meta name="description" content="Índice completo de los 420 repositorios de Pedro Belentani: agentes, devtools, creative tech, educación, protocolos y productos. Busca, filtra y encuentra el código.">
+  <title>Repositorios públicos — Belentani Software Atlas</title>
+  <meta name="description" content="Índice de los repositorios públicos de Pedro Belentani: agentes, devtools, creative tech, educación, protocolos y productos. Busca, filtra y encuentra el código.">
   <meta name="theme-color" content="#050505">
-  <meta property="og:title" content="Todos los repositorios — Belentani Software Atlas">
-  <meta property="og:description" content="420 repositorios, 93 públicos, 40 con demo. Un solo índice para encontrar todo el código.">
+  <meta property="og:title" content="Repositorios públicos — Belentani Software Atlas">
+  <meta property="og:description" content="Catálogo público verificado en GitHub. Explora código y proyectos sin enlaces privados.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.belentani.es/belentani-omg-portal/repos.html">
   <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Todos los repositorios — Belentani Software Atlas",
+    "name": "Repositorios públicos — Belentani Software Atlas",
     "url": "https://www.belentani.es/belentani-omg-portal/repos.html",
     "description": "Índice completo de los repositorios de Pedro Belentani.",
     "isPartOf": { "@type": "WebSite", "name": "Belentani", "url": "https://belentani.es" }
@@ -51,24 +51,24 @@
   <main>
     <section class="repos-hero">
       <div>
-        <p class="eyebrow"><span class="pulse"></span> REPOSITORY INDEX / LIVE / 2026</p>
-        <h1>Todo el código.<br><span class="repos-accent">Un solo índice.</span></h1>
-        <p class="lede">Los <strong data-total>420</strong> repositorios de <strong>belentani7</strong>, incluidos los privados y los archivados. Busca por nombre, descripción, tema o lenguaje. Encuentra el código, la demo o el contexto.</p>
+        <p class="eyebrow"><span class="pulse"></span> REPOSITORY INDEX / SNAPSHOT / 2026</p>
+        <h1>Código público.<br><span class="repos-accent">Un solo índice.</span></h1>
+        <p class="lede"><strong data-total>94</strong> repositorios públicos de <strong>belentani7</strong>, incluidos proyectos activos y archivados. Los privados no se exponen en este índice. Busca por nombre, descripción, tema o lenguaje.</p>
         <div class="hero-actions">
           <a class="btn btn-acid" href="#finder">BUSCAR UN REPO</a>
           <a class="btn btn-ghost" href="./index.html">VOLVER AL ATLAS</a>
         </div>
         <dl class="repos-stats" aria-label="Métricas de repositorios">
-          <div><dt data-total>420</dt><dd>repos</dd></div>
-          <div><dt data-public>93</dt><dd>públicos</dd></div>
-          <div><dt data-live>40</dt><dd>con demo</dd></div>
-          <div><dt data-archived>287</dt><dd>archivados</dd></div>
+          <div><dt data-total>94</dt><dd>repos</dd></div>
+          <div><dt data-public>94</dt><dd>públicos</dd></div>
+          <div><dt data-live>24</dt><dd>con web declarada</dd></div>
+          <div><dt data-archived>15</dt><dd>archivados</dd></div>
         </dl>
       </div>
       <aside class="repos-note">
         <p class="note-label">CÓMO LEERLO</p>
-        <p>Los repos privados aparecen con su nombre y descripción, pero el enlace solo funciona si tienes acceso. Los archivados se conservan como historia, no como producto activo.</p>
-        <p class="note-meta">Datos generados desde la API de GitHub · <span data-generated>2026-10-27</span></p>
+        <p>Sólo se muestran repositorios públicos. Los archivados se identifican como históricos. «Con web» significa URL declarada en GitHub, no despliegue probado.</p>
+        <p class="note-meta">Datos generados desde la API de GitHub · <span data-generated>2026-10-29</span></p>
       </aside>
     </section>
 
@@ -101,8 +101,7 @@
           <select id="repo-visibility">
             <option value="all">Todos</option>
             <option value="public">Públicos</option>
-            <option value="private">Privados</option>
-            <option value="live">Con demo</option>
+            <option value="live">Con web declarada</option>
             <option value="archived">Archivados</option>
             <option value="fork">Forks</option>
           </select>
@@ -125,7 +124,7 @@
       </div>
       <div class="repo-more">
         <button id="repo-more" type="button" class="btn btn-ghost" hidden>CARGAR MÁS</button>
-        <p class="repo-footnote">Los datos se generan con <code>scripts/generate-repos.mjs</code> desde la API de GitHub. Última generación: <span data-generated>2026-10-27</span>.</p>
+        <p class="repo-footnote">Los datos se generan con <code>scripts/generate-repos.mjs</code> desde la API de GitHub. Última generación: <span data-generated>2026-10-29</span>.</p>
       </div>
     </section>
   </main>
