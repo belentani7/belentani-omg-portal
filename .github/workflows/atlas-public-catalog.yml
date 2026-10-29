@@ -1,0 +1,41 @@
+name: Atlas public catalog privacy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/repos.json'
+      - 'data/repos.js'
+      - 'data/catalog.json'
+      - 'data/catalog.js'
+      - 'repos.html'
+      - 'index.html'
+      - 'scripts/generate-repos.mjs'
+      - 'tests/catalog-public-only.test.mjs'
+      - '.github/workflows/atlas-public-catalog.yml'
+  pull_request:
+    paths:
+      - 'data/repos.json'
+      - 'data/repos.js'
+      - 'data/catalog.json'
+      - 'data/catalog.js'
+      - 'repos.html'
+      - 'index.html'
+      - 'scripts/generate-repos.mjs'
+      - 'tests/catalog-public-only.test.mjs'
+      - '.github/workflows/atlas-public-catalog.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  public-catalog-privacy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Validate catalog privacy and source consistency
+        run: node --test tests/catalog-public-only.test.mjs
