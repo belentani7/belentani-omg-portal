@@ -46,6 +46,7 @@
   };
 
   const formatDate = (value) => {
+    if (!value) return "Fecha no verificada";
     try {
       return new Intl.DateTimeFormat("es-ES", { dateStyle: "medium" }).format(new Date(value));
     } catch {
@@ -100,7 +101,6 @@
     if (state.category !== "all" && repo.category !== state.category) return false;
     if (state.language !== "all" && (repo.language || "Sin lenguaje") !== state.language) return false;
     if (state.visibility === "public" && repo.private) return false;
-    if (state.visibility === "private" && !repo.private) return false;
     if (state.visibility === "live" && !repo.live) return false;
     if (state.visibility === "archived" && !repo.archived) return false;
     if (state.visibility === "fork" && !repo.fork) return false;
@@ -151,8 +151,7 @@
             <a class="repo-name" href="${esc(repoUrl)}" target="_blank" rel="noreferrer">
               ${esc(repo.name)}
               <span class="repo-badges">
-                ${repo.private ? badge("Privado", "badge-private") : ""}
-                ${repo.live ? badge("Demo", "badge-live") : ""}
+                                ${repo.live ? badge("Web declarada", "badge-live") : ""}
                 ${repo.archived ? badge("Archivado", "badge-archived") : ""}
                 ${repo.fork ? badge("Fork", "badge-fork") : ""}
               </span>
@@ -163,14 +162,13 @@
           <div class="repo-meta">
             <span><strong>${esc(repo.language || "Sin lenguaje")}</strong></span>
             <span>${esc(formatDate(repo.updated))}</span>
-            <span>${repo.stars ? `${repo.stars} ★` : "0 ★"}</span>
+            <span>${Number.isFinite(repo.stars) ? `${repo.stars} ★` : "★ sin dato"}</span>
             <span>${esc(CATEGORY_LABELS[repo.category] || repo.category)}</span>
           </div>
           <div class="repo-links">
             ${repoUrl ? `<a href="${esc(repoUrl)}" target="_blank" rel="noreferrer">GitHub ↗</a>` : ""}
-            ${live ? `<a class="is-live" href="${esc(live)}" target="_blank" rel="noreferrer">Demo ↗</a>` : ""}
-            ${repo.private ? `<span>Acceso privado</span>` : ""}
-          </div>
+            ${live ? `<a class="is-live" href="${esc(live)}" target="_blank" rel="noreferrer" title="URL declarada en GitHub; disponibilidad no verificada">Web declarada ↗</a>` : ""}
+                      </div>
         </article>
       `;
     }).join("");
