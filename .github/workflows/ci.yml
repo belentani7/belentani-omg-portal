@@ -1,0 +1,27 @@
+name: CI
+
+on: [push, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Verificación de protocolos
+        run: test -f README.md && test -f LICENSE && test -f .gitignore
+      - name: Sintaxis JS
+        run: find . \( -name "*.js" -o -name "*.mjs" \) -not -path "./vendor/*" | xargs -r -n1 node --check
+      - name: Tests del catálogo público
+        run: node --test tests/catalog-public-only.test.mjs
+      - name: Export del catálogo (protocolo 11)
+        run: node scripts/export.js
+      - name: HTML parseable
+        run: for f in $(find . -name "*.html" | head -50); do python3 -c "import html.parser,sys; html.parser.HTMLParser().feed(open('$f',encoding='utf-8',errors='replace').read())"; done && echo HTML OK

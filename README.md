@@ -25,28 +25,34 @@ Además del atlas curado, el portal incluye un buscador de los **repositorios p�
 ```text
 belentani-omg-portal/
 ├─ index.html
+├─ repos.html
 ├─ assets/
 │  ├─ style.css
+│  ├─ repos.css
 │  ├─ app.js
+│  ├─ repos.js
+│  ├─ public-repos-core.js
 │  ├─ icon.svg
 │  └─ og.png
 ├─ data/
-│  ├─ catalog.js
-│  └─ catalog.json
+│  ├─ catalog.js / catalog.json (atlas curado)
+│  └─ repos.js / repos.json (índice público)
 ├─ graph/
 │  ├─ index.html
 │  ├─ graph.json
 │  └─ GRAPH_REPORT.md
-├─ vendor/
-│  ├─ manifest.json
-│  ├─ graphify/
-│  ├─ superpowers/
-│  ├─ openchatx-mcp/
-│  ├─ codex-free/
-│  └─ swarm/
+├─ scripts/
+│  ├─ generate-repos.mjs (regenera el índice público con gh)
+│  └─ export.js (exporta data/catalog.json)
+├─ tests/
+│  └─ catalog-public-only.test.mjs
+├─ .github/ (workflows CI + seguridad)
+├─ vendor/manifest.json (los clones de engines se recrean aparte)
 ├─ .nojekyll
 ├─ PLAN.md
+├─ COHERENCE.md
 ├─ DEDUPE.md
+├─ LICENSE
 └─ README.md
 ```
 
@@ -156,6 +162,11 @@ El chequeo de enlaces, demos y diseño educativo está en [COHERENCE.md](./COHER
 - Los engines externos se clonaron por HTTPS y se fijaron por commit.
 - No se publican binarios, `node_modules` ni artefactos de build.
 
+## Utilidad
+
+- **Utilidad social:** da a cualquier persona un punto único para descubrir, filtrar y acceder al software público de Belentani (agentes, música, educación, negocio), sin depender de buscar repo por repo.
+- **Utilidad comercial:** funciona como escaparate y capa de acceso comercial del ecosistema OMG: dirige tráfico hacia las cinco madres y los productos con web, y puede sostenerse como servicio de curaduría/portafolio de cara a clientes.
+
 ## Criterio OMG
 
 Un proyecto entra si cumple al menos tres:
@@ -167,3 +178,7 @@ Un proyecto entra si cumple al menos tres:
 5. Buena relación señal/ruido.
 
 Lo que no cumple se queda fuera del atlas y, si duplica, se archiva.
+
+## Licencia
+
+MIT — ver [LICENSE](./LICENSE). Titular: Belentani (2026). Los engines clonados conservan la licencia de sus autores (ver tabla de engines y `vendor/manifest.json`).

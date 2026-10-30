@@ -1,5 +1,6 @@
 {
   "generated": "2026-10-29",
+  "scope": "public-only",
   "totals": {
     "repos": 94,
     "active": 79,
@@ -421,6 +422,5 @@
       "commit": "69b1a11",
       "local": "vendor/swarm"
     }
-  ],
-  "scope": "public-only"
+  ]
 }
