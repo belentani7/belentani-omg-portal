@@ -1,27 +1,54 @@
 name: CI
 
-on: [push, workflow_dispatch]
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  ci:
+  validate:
+    name: Public atlas, generated art and static HTML
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
-      - uses: actions/setup-node@v4
-        with: { node-version: 20 }
-      - name: Verificación de protocolos
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "20"
+          package-manager-cache: false
+      - name: Check repository contract
         run: test -f README.md && test -f LICENSE && test -f .gitignore
-      - name: Sintaxis JS
-        run: find . \( -name "*.js" -o -name "*.mjs" \) -not -path "./vendor/*" | xargs -r -n1 node --check
-      - name: Tests del catálogo público
+      - name: Check JavaScript syntax
+        run: find . -type f \( -name "*.js" -o -name "*.mjs" \) -not -path "./vendor/*" -not -path "./.git/*" -print0 | xargs -0 -r -n1 node --check
+      - name: Verify the public-only catalog
         run: node --test tests/catalog-public-only.test.mjs
-      - name: Export del catálogo (protocolo 11)
+      - name: Verify generated art series
+        run: node scripts/generate-art-series.mjs --check
+      - name: Test all repository suites
+        run: node --test tests/*.test.mjs
+      - name: Verify the catalog export protocol
         run: node scripts/export.js
-      - name: HTML parseable
-        run: for f in $(find . -name "*.html" | head -50); do python3 -c "import html.parser,sys; html.parser.HTMLParser().feed(open('$f',encoding='utf-8',errors='replace').read())"; done && echo HTML OK
+      - name: Parse every HTML page
+        run: |
+          python3 - <<'PY'
+          import html.parser
+          from pathlib import Path
+
+          paths = sorted(
+              path for path in Path(".").rglob("*.html")
+              if ".git" not in path.parts and "vendor" not in path.parts
+          )
+          for path in paths:
+              parser = html.parser.HTMLParser(convert_charrefs=True)
+              parser.feed(path.read_text(encoding="utf-8"))
+              parser.close()
+          print("Parsed", len(paths), "HTML documents")
+          PY

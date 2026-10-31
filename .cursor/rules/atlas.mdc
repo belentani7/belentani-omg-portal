@@ -1,0 +1,7 @@
+---
+description: Preserve the public-only OMG Atlas and reproducible generative art series.
+globs: "**/*"
+alwaysApply: true
+---
+
+Use the existing public catalog and repository history as the source of truth. Never expose metadata from private repositories. Keep the OMG Atlas visual language, accessible navigation, and reduced-motion behavior. Treat the 300 numbered SVG compositions as generated artworks, not product features, demos, or repository records. Regenerate them with scripts/generate-art-series.mjs; do not hand-edit generated HTML. Keep generated output reproducible, verify all local links, and report the exact checks and deployment state. Prefer semantic HTML and native controls. Keep Actions permissions minimal, pin actions to verified full commit SHAs, and disable persisted checkout credentials.

@@ -26,8 +26,10 @@ Además del atlas curado, el portal incluye un buscador de los **repositorios p�
 belentani-omg-portal/
 ├─ index.html
 ├─ repos.html
+├─ series/ (índice + 300 estudios HTML generados)
 ├─ assets/
 │  ├─ style.css
+│  ├─ series.css / series-index.js
 │  ├─ repos.css
 │  ├─ app.js
 │  ├─ repos.js
@@ -43,9 +45,11 @@ belentani-omg-portal/
 │  └─ GRAPH_REPORT.md
 ├─ scripts/
 │  ├─ generate-repos.mjs (regenera el índice público con gh)
+│  ├─ generate-art-series.mjs (regenera 300 estudios estáticos)
 │  └─ export.js (exporta data/catalog.json)
 ├─ tests/
-│  └─ catalog-public-only.test.mjs
+│  ├─ catalog-public-only.test.mjs
+│  └─ art-series.test.mjs
 ├─ .github/ (workflows CI + seguridad)
 ├─ vendor/manifest.json (los clones de engines se recrean aparte)
 ├─ .nojekyll
@@ -182,3 +186,18 @@ Lo que no cumple se queda fuera del atlas y, si duplica, se archiva.
 ## Licencia
 
 MIT — ver [LICENSE](./LICENSE). Titular: Belentani (2026). Los engines clonados conservan la licencia de sus autores (ver tabla de engines y `vendor/manifest.json`).
+
+
+## Serie generativa
+
+El atlas publica **300 estudios visuales HTML** repartidos en cinco familias. Cada página conserva la identidad visual existente y muestra una composición SVG estática, una lectura breve, enlaces de navegación y metadatos accesibles. La colección se declara como arte generativo: no son 300 repositorios, productos ni demos.
+
+Regenera o comprueba la serie con:
+
+~~~bash
+node scripts/generate-art-series.mjs
+node scripts/generate-art-series.mjs --check
+node --test tests/art-series.test.mjs
+~~~
+
+La fuente, los criterios de accesibilidad y el alcance están en [docs/art-series.md](docs/art-series.md). El índice está en [series/index.html](series/index.html).

@@ -6,3 +6,7 @@ Thumbs.db
 *.log
 previews/
 
+
+# Generated Python artifacts
+__pycache__/
+*.py[cod]
